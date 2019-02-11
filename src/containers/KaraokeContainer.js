@@ -9,10 +9,10 @@ class KaraokeContainer extends Component {
     return (
       <div className="karaoke-container">
         <div className="sidebar">
-          <Filter />
-          <SongList />
+          <Filter onInput={this.props.onInput} input={this.props.input}/>
+          <SongList songs={this.props.songs} clickPlay={this.props.clickPlay}/>
         </div>
-        <KaraokeDisplay />
+        <KaraokeDisplay toDisplay={this.props.toDisplay}/>
       </div>
     );
   }
